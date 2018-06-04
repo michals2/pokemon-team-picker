@@ -16,10 +16,10 @@ const GET_POKEMONS_QUERY = gql`
 // the current GraphiQL Schema to see what kind of data you need!
 // Link: https://graphql-pokemon.now.sh/graphql
 const GET_POKEMON_QUERY = gql`
-  query getPokemon("what goes in here?") {
-    pokemon(id: "what goes here?") {
-      id
-      name
+  query getPokemon($id: String) {
+    pokemon(id: $id) {
+      weaknesses
+      classification
       # What else do we need about the pokemon?
       # Did you read about Fragments?  This will become a Query Fragment
       # in the next session
